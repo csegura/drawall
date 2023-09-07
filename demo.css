@@ -3,95 +3,112 @@
  * Created by: @romheat
  * https://github.com/csegura/flexa
  */
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --color-gray: #393c41;
+  --color-black: #171a20;
+  --color-white: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    font-size: 1em;    
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  height: 100dvh;
 }
+
 .container {
-    display: flex;        
-    margin: 0;
-    padding: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 .cols {
-    flex-direction: row;
-    display: flex;
-    flex-grow: 1;
+  flex-direction: row;
+  display: flex;
+  flex-grow: 1;
 }
 .rows {
-    flex-direction: column;
-    display: flex;
-    flex-grow: 1;
-    align-items: stretch;
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+  align-items: stretch;
 }
 .box {
-    display: flex;
-    flex: 1;
-    /* background-color: beige;
+  display: flex;
+  flex: 1;
+  /* background-color: beige;
     border: 1px solid black;    */
-    margin: 3px;
-    padding: 3px;
+  margin: 3px;
+  padding: 3px;
 }
 .container > .rows:first-child {
-    height: calc(100vh - 5px);
-    width: 100%;
+  height: calc(100dvh - 5px);
+  width: 100%;
 }
 .container > .cols:first-child {
-    height: calc(100vh - 5px);
-    width: 100%;
+  height: calc(100dvh - 5px);
+  width: 100%;
 }
 .tab {
-    display: table;
-    width: 100%;
+  display: table;
+  width: 100%;
 }
 .tab .row {
-    display: table-row;
+  display: table-row;
 }
 .tab .row .box {
-    display: table-cell;
-    border: 0;
+  display: table-cell;
+  border: 0;
 }
 /*
  * custom css
  */
-html {
-    height: 100%;
-}
+html,
 body {
-    overflow: hidden !important;
-    height: 100dvh;
-    min-height: 100dvh;
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
+  overflow: hidden !important;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
 }
 .title {
-    width: 100%;
-    background-color: lightseagreen;
-    color: white;
-    text-align: left;
-    font-size: 0.75em;
-    padding: 2px;    
+  width: 100%;
+  background-color: lightseagreen;
+  color: white;
+  text-align: left;
+  font-size: 0.75em;
+  padding: 2px;
 }
 
 #canvas {
-    background-color: ghostwhite;
-    margin: 0px;
-    padding: 0px;
-    position: absolute;    
+  background-color: ghostwhite;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
 }
 
 #log {
-    background-color: #0f0f0f;
-    color: yellowgreen;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 8px;
-    font: 0.9em monospace;
-    overflow: hidden;
-    white-space: pre-wrap;
+  background-color: #0f0f0f;
+  color: yellowgreen;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 4px 0px 0px 4px;
+  font: 0.9em monospace;
+  overflow: hidden;
+  white-space: pre-wrap;
 }
