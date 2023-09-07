@@ -153,14 +153,14 @@ class Drawall extends EventTarget {
       const previousPoint = this.previousPoint();
       const xc = (lastPoint.x + previousPoint.x) / 2;
       const yc = (lastPoint.y + previousPoint.y) / 2;
-      this.ctx.strokeStyle = lastPoint.c;
+      this.ctx.strokeStyle = previousPoint.c;
       this.ctx.lineWidth = lastPoint.w * this.MAX_LINE_WIDTH;
       this.ctx.quadraticCurveTo(previousPoint.x, previousPoint.y, xc, yc);
       this.ctx.lineTo(xc, yc);
       this.ctx.stroke();
       this.ctx.beginPath();
       this.ctx.moveTo(xc, yc);
-      this.points.push(this.makeDrawPoint(xc, yc, lastPoint.w, lastPoint.c));
+      //this.points.push(this.makeDrawPoint(xc, yc, lastPoint.w, lastPoint.c));
     } else {
       this.ctx.beginPath();
       this.ctx.moveTo(lastPoint.x, lastPoint.y);
@@ -205,12 +205,20 @@ class Drawall extends EventTarget {
     this.ctx.font = "8px Arial";
     this.ctx.fillStyle = "#000";
     this.ctx.fillText("0,0", 0, 12);
+   
     this.ctx.fillText(
-      this.boundingRect.width + "," + this.boundingRect.height,
+      Math.round(this.boundingRect.width/2) + "," + Math.round(this.boundingRect.height/2),
       this.boundingRect.width / 2,
       this.boundingRect.height / 2
     );
     this.ctx.stroke();
+   
+    this.ctx.fillText(
+        this.boundingRect.width + "," + this.boundingRect.height,
+        this.boundingRect.width-30,
+        this.boundingRect.height-5,
+        );
+//    this.ctx.stroke();
   };
 
   log = (msg, data) => {
@@ -223,7 +231,7 @@ class Drawall extends EventTarget {
     if (/android/i.test(navigator.userAgent)) {
       return "Android";
     }
-    if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+    if (/iPad|iPhone|iPod|Mac/i.test(navigator.userAgent) && !window.MSStream) {
       return "iOS";
     }
     return "Other";

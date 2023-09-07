@@ -1,4 +1,3 @@
-
 let canvas = document.getElementById("canvas");
 let log = document.getElementById("log");
 let colorPicker = document.getElementById("colorPicker");
@@ -13,8 +12,12 @@ logger = (msg) => {
 };
 
 window.onload = function () {
-  logger("Loaded drawall.js");
+  let now = new Date();
+  let time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+  logger("Loaded drawall.js " + time);
+
   logger("Detected " + Drawall.isAndroidOrIOS());
+  logger("User agent " + navigator.userAgent);
 
   touch.checked = Drawall.autoDetectTouch();
 
@@ -22,7 +25,6 @@ window.onload = function () {
     touch: touch.checked,
     guides: true,
   });
-
 
   colorPicker.addEventListener("change", (ev) => {
     drawAll.changeColor(ev.target.value);
@@ -35,17 +37,17 @@ window.onload = function () {
   touch.addEventListener("click", (ev) => {
     drawAll.setTouch(ev.target.checked);
   });
-  
+
   // events
   drawAll.addEventListener("drawstart", (ev) => {
     logger("DrawStart: " + JSON.stringify(ev.detail, null, 2));
-  })
+  });
 
   drawAll.addEventListener("drawend", () => {
     logger("DrawEnd");
-  })
+  });
 
   drawAll.addEventListener("log", (ev) => {
     logger("drawAll: " + JSON.stringify(ev.detail, null, 2));
-  })
+  });
 };
