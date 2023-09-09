@@ -9,7 +9,7 @@ class Drawall extends EventTarget {
     this.drawing = false;
     this.points = [];
     this.drawHistory = [];
-    this.drawColor = "#000";
+    this.drawColor = "#000";    
     this.boundingRect = el.getBoundingClientRect();
     this.MAX_LINE_WIDTH = 10;
 
@@ -104,7 +104,7 @@ class Drawall extends EventTarget {
     return this.makeDrawPoint(
       e.clientX - this.boundingRect.left,
       e.clientY - this.boundingRect.top,
-      e.force || 1
+      Math.log(e.force + 1) || 0.2
     );
   };
 
