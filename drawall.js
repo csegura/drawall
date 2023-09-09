@@ -4,7 +4,8 @@
  * https://opensource.org/licenses/MIT
  *
  * Project: Drawall
- * Description: Designed to offer a unified and consistent user experience across various devices, ensuring smooth and responsive painting interactions for users.
+ * Description: Draw over canvas with touch or pointer events
+ * Designed to offer a unified and consistent user experience across various devices, ensuring smooth and responsive painting interactions for users.
  * Version: 1.0.0 (Replace with your library's version number)
  * Author: @romheat
  * Repository: https://github.com/romheat/drawall)
