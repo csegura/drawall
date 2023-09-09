@@ -1,3 +1,14 @@
+/*!
+ * @romheat
+ * MIT License
+ * https://opensource.org/licenses/MIT
+ *
+ * Project: Drawall
+ * Description: Designed to offer a unified and consistent user experience across various devices, ensuring smooth and responsive painting interactions for users.
+ * Version: 1.0.0 (Replace with your library's version number)
+ * Author: @romheat
+ * Repository: https://github.com/romheat/drawall)
+ */
 class Drawall extends EventTarget {
   constructor(el, options) {
     super();
