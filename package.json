@@ -1,0 +1,20 @@
+{
+  "name": "drawall",
+  "version": "1.0.0",
+  "description": "Designed to offer a unified and consistent user experience across various devices, ensuring smooth and responsive painting interactions for users.",
+  "main": "drawall.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csegura/drawall.git"
+  },
+  "keywords": ["canvas", "drawing", "painting", "sketching", "drawing-board", "drawing-touch", "drawing-pointer"],
+  "author": "Carlos Segura",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csegura/drawall/issues"
+  },
+  "homepage": "https://github.com/csegura/drawall#readme"
+}
