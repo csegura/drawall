@@ -18,7 +18,7 @@ See demo.js
 
 ### From CDN
 
-https://cdn.jsdelivr.net/npm/drawall@1.0.0/drawall.min.js
+https://cdn.jsdelivr.net/npm/drawall@2.0.0/drawall.min.js
 
 ### Features
 
