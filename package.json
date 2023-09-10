@@ -1,6 +1,6 @@
 {
   "name": "drawall",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Draw over canvas with touch or pointer events",
   "main": "drawall.js",
   "scripts": {
