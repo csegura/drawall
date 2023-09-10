@@ -1,4 +1,8 @@
-## DraWall
+[![GitHub version](https://badge.fury.io/gh/csegura%2Fdrawall.svg)](https://badge.fury.io/gh/csegura%2Fdrawall) [![github release version](https://img.shields.io/github/v/release/csegura/drawall.svg?include_prereleases)](https://github.com/csegura/drawall/releases/latest) [![npm version](https://badge.fury.io/js/drawall.svg)](https://badge.fury.io/js/drawall) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/csegura/drawall/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+
+# DraWall
+
+> Draw over canvas with touch or pointer events
 
 Designed to offer a unified and consistent user experience across various devices, ensuring smooth and responsive painting interactions for users.
 
@@ -11,6 +15,10 @@ A simple drawing lib for use in my remotepad app
 ### Use
 
 See demo.js
+
+### From CDN
+
+https://cdn.jsdelivr.net/npm/drawall@1.0.0/drawall.min.js
 
 ### Features
 
