@@ -182,6 +182,8 @@ class Drawall extends EventTarget {
   clear = () => {
     this.ctx.clearRect(0, 0, this.boundingRect.width, this.boundingRect.height);
     this.drawGuideLines();
+    this.drawHistory = [];
+    this.points = [];
   };
 
   undo = () => {
